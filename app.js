@@ -1,21 +1,36 @@
-// 2 - 6 Objects
+ //function part. 1
+ function sayHello(nameOfPerson, age){
+    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
+ }
 
-const player = {
+ sayHello("ChoiDot", 10);
+ sayHello("KimDot", 23);
+ sayHello("HanDot", 34);
+ 
+//function part. 2
+
+ function plus(firstNumber, secondNumber){
+    console.log(firstNumber +  secondNumber);
+ }
+
+ function divide(firstNumber, secondNumber){
+    console.log(firstNumber / secondNumber);
+    //function 안에서 쓰면 오류안남.
+    console.log(firstNumber);
+}
+//function 밖에서 쓰면 오류남.
+//console.log(firstNumber);
+
+ plus(10, 10); 
+ divide(10, 10);
+ 
+ //나만에 function, object 만들기
+ const player = {
     name: "nico",
-    points: 100,
-    fat: true,
-};
-//name만 따로 
-console.log(player);
-console.log(player.name);
-console.log(player["name"])
-//fat 수정하기
-console.log(player.fat)
-player.fat = false;
-console.log(player)
-//lastName 추가하기
-player.lastName = "potato";
-console.log(player)
-// points 숫자 더하기
-player.points = player.points + 100;
-console.log(player)
+    age: 30,
+    sayHello: function(otherPersonsName){
+        console.log("hello! " + otherPersonsName + " nice to meet you!")
+    }
+ }
+ player.sayHello("ChoiDot");
+ player.sayHello("KimDot");
