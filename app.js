@@ -1,36 +1,42 @@
- //function part. 1
- function sayHello(nameOfPerson, age){
-    console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
- }
+//object 복습 
 
- sayHello("ChoiDot", 10);
- sayHello("KimDot", 23);
- sayHello("HanDot", 34);
- 
-//function part. 2
 
- function plus(firstNumber, secondNumber){
-    console.log(firstNumber +  secondNumber);
- }
+const player = {
+    name: "choiDot",
+    age: 98,
+    job: "goodjob",
+};
+console.log(player);
+//property 바꾸기
+player.name = "choiGood";
+player.job = "veryGoodJob"
+console.log(player);
+//property 추가하기
+player.home = "veryGoodXi";
+console.log(player);
 
- function divide(firstNumber, secondNumber){
-    console.log(firstNumber / secondNumber);
-    //function 안에서 쓰면 오류안남.
-    console.log(firstNumber);
+//function 복습
+function plus(potato, salad){
+    console.log(potato + salad);
 }
-//function 밖에서 쓰면 오류남.
-//console.log(firstNumber);
+plus(5000, 7000);
 
- plus(10, 10); 
- divide(10, 10);
- 
- //나만에 function, object 만들기
- const player = {
-    name: "nico",
-    age: 30,
-    sayHello: function(otherPersonsName){
-        console.log("hello! " + otherPersonsName + " nice to meet you!")
-    }
- }
- player.sayHello("ChoiDot");
- player.sayHello("KimDot");
+//add, minus, divide, squared 만들기.
+const calculator ={
+    add: function(a, b){
+        console.log(a + b)
+    },
+    minus: function(a, b){
+        console.log(a - b)
+    },
+    divide: function(a, b){
+        console.log(a / b)
+    },
+    squared: function(a, b){
+        console.log(a ** b)
+    },
+};
+calculator.add(3, 3);
+calculator.minus(3, 3);
+calculator.divide(3, 3);
+calculator.squared(3, 3);
