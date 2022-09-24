@@ -1,42 +1,58 @@
-//object 복습 
+// return. 1
+
+const age = 78;
+function calculateKrAge(ageOfForeigner){
+    ageOfForeigner + 2;
+    return "hello";
+} 
+
+const krAge = calculateKrAge(age)
+
+console.log(krAge); 
 
 
-const player = {
-    name: "choiDot",
-    age: 98,
-    job: "goodjob",
-};
-console.log(player);
-//property 바꾸기
-player.name = "choiGood";
-player.job = "veryGoodJob"
-console.log(player);
-//property 추가하기
-player.home = "veryGoodXi";
-console.log(player);
+// return. 2
 
-//function 복습
-function plus(potato, salad){
-    console.log(potato + salad);
-}
-plus(5000, 7000);
-
-//add, minus, divide, squared 만들기.
 const calculator ={
     add: function(a, b){
-        console.log(a + b)
+        return a + b;
     },
     minus: function(a, b){
-        console.log(a - b)
+        return a - b;
+    },
+    times: function (a, b){
+        return a * b;
     },
     divide: function(a, b){
-        console.log(a / b)
+        return a / b;
     },
     squared: function(a, b){
-        console.log(a ** b)
+        return a ** b;
     },
 };
-calculator.add(3, 3);
-calculator.minus(3, 3);
-calculator.divide(3, 3);
-calculator.squared(3, 3);
+const addResult = calculator.add(2, 3);
+const minusResult = calculator.minus(addResult, 10);
+const timesResult = calculator.times(10, minusResult);
+const divideResult = calculator.divide(timesResult, addResult);
+const squaredResult = calculator.squared(divideResult, minusResult);
+ 
+// recap. 1
+const calculator = {
+    add: function(a, b){
+        return a + b;
+    },
+    minus: function(a, b){
+        return a - b;
+    },
+    times: function (a, b){
+        return a * b;
+    },
+    divide: function(a, b){
+        return a / b;
+    },
+    squared: function(a, b){
+        return a ** b;
+    },
+};
+
+const addResult = calculator.add(2, 3);
