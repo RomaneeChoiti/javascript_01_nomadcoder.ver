@@ -1,58 +1,41 @@
-// return. 1
-
-const age = 78;
-function calculateKrAge(ageOfForeigner){
-    ageOfForeigner + 2;
-    return "hello";
-} 
-
-const krAge = calculateKrAge(age)
-
-console.log(krAge); 
-
-
-// return. 2
-
-const calculator ={
-    add: function(a, b){
-        return a + b;
-    },
-    minus: function(a, b){
-        return a - b;
-    },
-    times: function (a, b){
-        return a * b;
-    },
-    divide: function(a, b){
-        return a / b;
-    },
-    squared: function(a, b){
-        return a ** b;
-    },
-};
-const addResult = calculator.add(2, 3);
-const minusResult = calculator.minus(addResult, 10);
-const timesResult = calculator.times(10, minusResult);
-const divideResult = calculator.divide(timesResult, addResult);
-const squaredResult = calculator.squared(divideResult, minusResult);
+//conditionals part. 2
  
-// recap. 1
-const calculator = {
-    add: function(a, b){
-        return a + b;
-    },
-    minus: function(a, b){
-        return a - b;
-    },
-    times: function (a, b){
-        return a * b;
-    },
-    divide: function(a, b){
-        return a / b;
-    },
-    squared: function(a, b){
-        return a ** b;
-    },
-};
+const age = parseInt(prompt("How old are you?"));
 
-const addResult = calculator.add(2, 3);
+ if(isNaN(age)){
+    console.log("please write a number");
+ } else {
+    console.log("Thank you for writing your age.")
+ }
+ 
+
+ //conditionals part. 3
+ //음주 자판기
+ 
+ const age = parseInt(prompt("How old are you?"));
+
+ if(isNaN(age)){
+    console.log("please write a number");
+ } else if (age < 19){
+    console.log("You are too young");
+ } else {
+    console.log("You can drink");
+ }
+ 
+
+//25~ 59세 사이, and(&&)연산자, or(||)연산자
+
+ const age = parseInt(prompt("How old are you?"));
+
+ if(isNaN(age) || age < 0){
+    console.log("please write a real positive number");
+ } else if (age < 25){
+    console.log("You are too young");
+ } else if (age >= 25 && age <= 50){
+    console.log("Thank you write your age");
+ } else if (age >= 51 && age <= 80) {
+    console.log("You should exercise");
+ } else if (age > 80) {
+    console.log("You can do whatever you want.")
+ } 
+
