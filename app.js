@@ -1,8 +1,16 @@
-const loginIqut = document.querySelector("#login-form input");
-const loginButton = document.querySelector("#login-form Button");
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form")
+const link = document.querySelector("a")
 
-function btnClick(){
-    console.log("Hello~", loginIqut.value);
+
+function onLoginSubmit(event){
+    event.preventDefault();
+    console.log(loginInput.value);
+}
+function handleLinkClick(event){
+    event.preventDefault();
+    console.log(event)
 }
 
-loginButton.addEventListener("click", btnClick);
+loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handleLinkClick);
