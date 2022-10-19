@@ -27,4 +27,4 @@ if (savedUsername === null) {
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     paintGreeting(savedUsername);
-}
+};
