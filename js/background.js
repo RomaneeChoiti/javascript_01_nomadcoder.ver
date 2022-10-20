@@ -8,4 +8,4 @@ bgImg.src = `img/${chosenImage}`;
 
 console.log(bgImg);
 
-document.body.appendChild(bgImg);
+document.body.appendChild(bgImg); 
